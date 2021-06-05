@@ -9,6 +9,8 @@
   font-weight: 400;
   padding: 1em;
 
+  line-height: 150%;
+
   @include lg {
     width: calc(min(120ch, calc(100%) - 64px));
   }

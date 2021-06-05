@@ -55,8 +55,8 @@ body {
     margin: auto;
     font-size: 1.2em;
     img {
-      width: 140px;
-      height: 100px;
+      width: 110px;
+      height: 40px;
       transition: .2s;
     }
   }
@@ -132,6 +132,10 @@ body {
       text-shadow: 2px 0 2px rgba($darkThrd, 0.75), -2px 0 2px rgba($darkScnd, 0.75);
     }
   }
+}
+
+.l-2 {
+  padding-left: 2rem;
 }
 
 .container {

@@ -8,10 +8,10 @@
   <meta name="author" content="{{ config.extra.author }}">
   <meta name=description content="Personal website of a web developer using zola static generator website.">
   <meta property="og:title" content="{{ config.extra.author }}">
-  <meta property="og:image" content="{{config.base_url ~ '/hello.png' }}">
+  <meta property="og:image" content="{{config.base_url ~ '/milk.png' }}">
   <meta property="og:description" content="Personal website of a web developer using zola static generator website.">
   <link rel="preload"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
   <link rel="preload" href="{{ get_url(path="style.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
@@ -25,7 +25,7 @@
       <a {% if current_path == "/" or current_path == "fr/" %} class="nav-item active" {% else %} class="nav_item" {% endif %}
           {% if lang == "en" %} href="{{ config.base_url ~ '/' }}" {% else %} href="{{ config.base_url ~ '/' ~ lang}}" {% endif %}
       >
-        <img src="{{ config.base_url ~ '/hello.png' }}" alt="hello" width="125" height="67">
+        <img src="{{ config.base_url ~ '/milk.png' }}" alt="hello" height="30">
       </a>
       <div class="nav-right">
         <small class="languages">
@@ -44,18 +44,32 @@
             <a href="{{ current_url | replace(from=lang ~ "/", to="") }}">{{ config.extra.languages_flags[0] }}</a>
           {% endif %}
         </small>
-        <a {% if current_path is containing("/about") %}class="nav-item active"{% else %}class="nav-item"{% endif %}
+
+        <a class="nav-item" href="https://blog.mr-milk.cn">
+        {% if lang == "zh-cn" %}
+        <span> 博客 </span>
+        {% else %}
+        <span> Blog </span>
+        {% endif %}
+        </a>
+
+        <a {% if current_path is containing("/about") %}class="nav-item l-2 active"{% else %}class="nav-item l-2"{% endif %}
             {% if lang == "en" %} href="{{ config.base_url ~ '/about' }}" {% else %} href="{{ config.base_url ~ '/' ~ lang ~ '/about'}}" {% endif %}
         >
-            <span> About me </span>
+        {% if lang == "zh-cn" %}
+        <span> 关于我 </span>
+        {% else %}
+        <span> About me </span>
+        {% endif %}
         </a>
+        
       </div>
     </nav>
     <main class="container">
       {% block content %} {% endblock %}
     </main>
     <footer class="footer">
-      <span class="copyright">©</span>&nbsp;2021 - Nantes
+      <span class="copyright">©</span>&nbsp;{{ config.extra.years }} - {{ config.extra.author }}
     </footer>
   </div>
 </body>

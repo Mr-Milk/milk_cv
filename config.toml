@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://netoun.github.io/ntun/"
+base_url = "https://mr-milk.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -11,26 +11,28 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 default_language = "en"
-languages = []
+languages = [
+    {code = "zh-cn"},
+]
 
 
 [extra]
-author = "Jon Snow"
+author="Mr.Milk"
 author_image="me.jpg"
-city="Winterfell"
-years="281"
+city="Guang Zhou, Macau"
+years="2021"
 
-job = "The King in the North"
-description = "Dragons & Aunt ❤️"
+job = "Second year Ph.D. 🧐📚🖥"
+description = "Work on spatial single-cell"
 
 links = [
-    { url = "", title="", icon = "fab fa-github"},
-    { url = "", title="", icon = "fab fa-twitter"},
-    { url = "", title="", icon = "fab fa-linkedin"},
-    { url = "mailto:", title="",icon = "fas fa-envelope"}
+    { url = "https://github.com/Mr-Milk", title="Mr-Milk", icon = "fab fa-github"},
+    { url = "https://www.linkedin.com/in/%E6%98%93%E6%B0%91-%E9%83%91-562923160/?locale=en_US", title="Linkedin", icon = "fab fa-linkedin"},
+    { url = "mailto:yb97643@um.edu.mo", title="School Email",icon = "fas fa-envelope"}
 ]
 
 # if you add languages, put your emoji flag on array
 languages_flags = [
-    "🇬🇧"
+    "🇬🇧",
+    "🇨🇳",
 ]
